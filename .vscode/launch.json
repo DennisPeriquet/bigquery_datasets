@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "list_datasets-project1",
+            "type": "go",
+            "request": "launch",
+            "program": "${workspaceFolder}/cmd/list_datasets/main.go",
+            "args": [
+                "some-project1",
+                "/Users/dperique/keys/some-project1--0ef999999-reader.json"
+            ]
+        },
+        {
+            "name": "list_datasets-project2",
+            "type": "go",
+            "request": "launch",
+            "program": "${workspaceFolder}/cmd/list_datasets/main.go",
+            "args": [
+                "some-project2",
+                "/Users/dperique/keys/some-project2--0ef999999-reader.json"
+            ]
+        }
+    ]
+}
