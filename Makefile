@@ -11,7 +11,7 @@ all: $(EXECUTABLE) gen1 gen2 gen1a gen2a
 build: $(EXECUTABLE)
 
 $(EXECUTABLE): cmd/list_datasets/main.go
-	@go build -gcflags='-N -l' $(shell grep "module " go.mod | awk '{print $$2}')/cmd/list_datasets
+	@go build -mod=vendor -gcflags='-N -l' $(shell grep "module " go.mod | awk '{print $$2}')/cmd/list_datasets
 
 $(LOG_FILE1): $(EXECUTABLE)
 	./$(EXECUTABLE) openshift-ci-data-analysis ~/redhat_keys/openshift-ci-data-analysis-0ed2e02855f9-reader.json > $(LOG_FILE1)
